@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:  'Jomolhari', serif;
+  background-color: #f4f4f0;
+}
+
+
+
+header {
+  background-color: #6b4c3b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.logo {
+  height: 40px;
+  border-radius: 30%;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: 300px;
+}
+
+.search-bar .lupa {
+  height: 20px;
+  margin-right: 10px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+.icons img {
+  height: 25px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.titulo {
+  text-align: center;
+  margin: 30px 0 10px;
+}
+
+.titulo h1 {
+  font-size: 24px;
+}
+
+.ver-todo {
+  margin-top: 10px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  padding: 30px 50px;
+}
+
+.producto {
+  background-color: #cbc696;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.producto img {
+  width: 100%;
+  max-width: 140px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.producto .nombre {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.producto .precio {
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+.producto .carrito {
+  height: 22px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+
+footer {
+  background-color: #e4e4e4;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer-icons img {
+  height: 30px;
+  margin-left: 20px;
+  cursor: pointer;
+}
