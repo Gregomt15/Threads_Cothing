@@ -5,11 +5,9 @@
 }
 
 body {
-  font-family:  'Jomolhari', serif;
+  font-family: 'Jomolhari', serif;
   background-color: #f4f4f0;
 }
-
-
 
 header {
   background-color: #6b4c3b;
@@ -66,28 +64,25 @@ header {
   border-radius: 20px;
   border: none;
   background-color: white;
-
   cursor: pointer;
 }
 
-
 .productos {
   display: grid;
-  grid-template-columns: repeat(3,1fr) ;
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   padding: 30px 50px;
 }
 
 .producto {
-    background-color: #cbc696;
-    justify-content: space-between;
-    border-radius: 8px;
-    padding: 15px;
-    text-align: center;
-     min-height: 320px;
-    display: flex;
-    flex-direction: column;
-
+  background-color: #cbc696;
+  justify-content: space-between;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
 }
 
 .producto img {
@@ -108,14 +103,12 @@ header {
 .producto .precio {
   margin: 5px 0;
   font-size: 15px;
-
 }
 
 .producto .carrito {
   height: 22px;
   margin-top: 5px;
 }
-
 
 footer {
   background-color: #e4e4e4;
@@ -130,10 +123,12 @@ footer {
   margin-left: 20px;
   cursor: pointer;
 }
-a{
+
+a {
   text-decoration: none;
   color: black;
 }
+
 .login-container {
   max-width: 350px;
   margin: 50px auto;
@@ -184,3 +179,46 @@ a{
   margin-top: 15px;
   font-size: 14px;
 }
+
+/* --- Estilos para filtros --- */
+#filtros {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  background-color: #e9e6d8;
+  flex-wrap: wrap;
+}
+
+#filtros label {
+  font-weight: bold;
+}
+
+#filtros select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #999;
+}
+#total-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#precio-total {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#btn-pagar {
+  background-color: #6b4c3b;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#btn-pagar:hover {
+  background-color: #5b3f32;
+}
+

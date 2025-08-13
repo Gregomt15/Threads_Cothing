@@ -12,27 +12,34 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Jomolhari" rel="stylesheet">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+  
 </head>
-<body>
+<body onload="mostrarCarrito()">
   <header>
     <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo"></a>
     <div class="search-bar">
-      <img src="img/lupa.svg" alt="" class="lupa">
-    <input type="text" id="buscador" name="buscador" placeholder="BUSCADOR" size="100" height="100" >
+      <img src="img/lupa.svg" alt="lupa" class="lupa">
+      <input type="text" id="buscador" name="buscador" placeholder="BUSCADOR">
     </div>
     <div class="icons">
-      <img src="img/user.png" alt="">
-      <img src="img/cart.svg" alt="">
+      <a href="perfil.html"><img src="img/user.png" alt="perfil"></a>
+      <a href="carrito.html"><img src="img/cart.svg" alt="carrito"></a>
     </div>
   </header>
-<main>
 
-</main>
+  <main>
+    <section id="Listado-carrito" class="productos"></section>
+    <div id="total-container">
+      <h2 id="precio-total">Total: $0</h2>
+      <button id="btn-pagar">Pagar</button>
+    </div>
+  </main>
+
   <footer>
     <div class="footer-icons">
-      <img src="img/map.svg" alt="">
-      <img src="img/whatsapp.svg" alt="">
-      <img src="img/instagram.svg" alt="">
+    <a href="https://www.google.com/maps/place/Royal+Casino/@53.8966116,27.5498885,18.22z/data=!4m14!1m7!3m6!1s0x882b898dbe51bd95:0xcf2a97932bbaaba!2sThreads+Clothing+Co!8m2!3d62.6573279!4d-95.989235!16s%2Fg%2F11r0z2bc2n!3m5!1s0x46dbcfe81a4050ad:0xe0e4fe3a81a78d20!8m2!3d53.8968873!4d27.5508053!16s%2Fg%2F1thtn8k7?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D"><img src="img/map.svg" alt=""></a> 
+    <a href="https://www.instagram.com/threadsclothingcompany/?hl=es"><img src="img/instagram.svg" alt=""></a>
+    <a href="https://api.whatsapp.com/send/?phone=541124153083&text&type=phone_number&app_absent=0"><img src="img/whatsapp.svg" alt=""></a>   
     </div>
   </footer>
 
