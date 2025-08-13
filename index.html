@@ -14,12 +14,12 @@
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 
 </head>
-<body>
+<body onload="mostrarProductos()">
   <header>
     <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo"></a>
     <div class="search-bar">
       <img src="img/lupa.svg" alt="lupa" class="lupa">
-      <input type="text" id="buscador" name="buscador" placeholder="BUSCADOR">
+      <input type="text" id="buscador" name="buscador" placeholder="BUSCADOR" onchange="buscar(this.value)">
     </div>
     <div class="icons">
       <a href="perfil.html"><img src="img/user.png" alt="perfil"></a>
@@ -33,7 +33,7 @@
     <a href="vertodo.html"><button class="ver-todo">VER TODO</button></a>
   </section>
 
-  <section class="productos">
+  <!-- <section class="productos">
     <a href="prod.html?id=5"><div class="producto">
       <img src="img/pg.png" alt="Pantalon Gris">
       <p>Pantalón Gris</p>
@@ -75,7 +75,9 @@
       <p>70.000 $</p>
       <img src="img/cart.svg" alt="" class="carrito">
     </div></a>
-  </section>
+  </section> -->
+
+  <section class="productos" id="listado-productos"></section>
 </main>
 
 <footer>

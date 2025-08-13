@@ -88,3 +88,25 @@ function mostrarCarrito() {
         document.getElementById("precio-total").textContent = `Total: $${total.toLocaleString()}`;
     }
 }
+
+function buscar(palabra){
+    let lista = [...productos];
+
+        lista = lista.filter(p => p.nombre.toLowerCase().includes(palabra.toLowerCase()));
+
+    let contenido = "";
+    lista.forEach((producto, id) => {
+        contenido += `
+            <div class="producto">
+                <img src="img/${producto.imagen}" alt="${producto.nombre}">
+                <p>${producto.nombre}</p>
+                <p>${producto.precio} $</p>
+                <button type="button" onclick="">Ver Detalle producto</button>
+                <button type="button" onclick="agregarProd(${id})">
+                    <img src="img/cart.svg" alt="Carrito" class="carrito">
+                </button>
+            </div>
+        `;
+    });
+    document.getElementById("listado-productos").innerHTML = contenido;
+}
