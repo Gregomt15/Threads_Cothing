@@ -1,65 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Detalle del producto">
-    <meta name="author" content="Threads Clothing">
-    <script type="text/javascript" src="funciones.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Detalle del producto">
+  <meta name="author" content="Threads Clothing">
+  <script type="text/javascript" src="funciones.js"></script>
 
-    <title>Detalle de Producto - Threads Clothing</title>
+  <title>Detalle de Producto - Threads Clothing</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Jomolhari" rel="stylesheet">
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Jomolhari" rel="stylesheet">
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 
-    <style>
-        .detalle-container {
-            max-width: 900px;
-            margin: 40px auto;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            background-color: #cbc696;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .detalle-container img {
-            max-width: 350px;
-            border-radius: 8px;
-        }
-        .detalle-info {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .detalle-info h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        .detalle-info p {
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-        .detalle-precio {
-            font-size: 20px;
-            font-weight: bold;
-            margin: 10px 0;
-        }
-        .btn-agregar {
-            background-color: #6b4c3b;
-            color: white;
-            padding: 10px 25px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .btn-agregar:hover {
-            background-color: #5b3f32;
-        }
-    </style>
 </head>
+
 <body onload="cargarDetalleProducto()">
   <header>
     <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo"></a>
@@ -75,37 +31,20 @@
 
   <main>
     <section class="detalle-container" id="detalle-producto">
-    
+
     </section>
+
   </main>
 
   <footer>
     <div class="footer-icons">
-      <a href="#"><img src="img/map.svg" alt=""></a> 
-      <a href="#"><img src="img/instagram.svg" alt=""></a>
-      <a href="#"><img src="img/whatsapp.svg" alt=""></a>
+      <a href="https://www.google.com/maps/place/Royal+Casino/..."><img src="img/map.svg" alt=""></a>
+      <a href="https://www.instagram.com/threadsclothingcompany/?hl=es"><img src="img/instagram.svg" alt=""></a>
+      <a href="https://api.whatsapp.com/send/?phone=541124153083&text&type=phone_number&app_absent=0"><img src="img/whatsapp.svg" alt=""></a>
     </div>
   </footer>
 
-  <script>
-    function cargarDetalleProducto() {
-        const params = new URLSearchParams(window.location.search);
-        const id = params.get("id");
-        if (id !== null && productos[id]) {
-            const p = productos[id];
-            document.getElementById("detalle-producto").innerHTML = `
-                <img src="img/${p.imagen}" alt="${p.nombre}">
-                <div class="detalle-info">
-                    <h2>${p.nombre}</h2>
-                    <p class="detalle-precio">${p.precio} $</p>
-                    <p>Este es un excelente ${p.categoria.toLowerCase()} de alta calidad, ideal para cualquier ocasión.</p>
-                    <button class="btn-agregar" onclick="agregarProd(${id})">Agregar al carrito</button>
-                </div>
-            `;
-        } else {
-            document.getElementById("detalle-producto").innerHTML = "<p>Producto no encontrado</p>";
-        }
-    }
-  </script>
+
 </body>
+
 </html>

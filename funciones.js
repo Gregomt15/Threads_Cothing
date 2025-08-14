@@ -31,7 +31,7 @@ function mostrarProductos(filtroCategoria = "", ordenPrecio = "", filtroColor = 
                 <img src="img/${producto.imagen}" alt="${producto.nombre}">
                 <p>${producto.nombre}</p>
                 <p>${producto.precio} $</p>
-                <button type="button" onclick="">Ver Detalle producto</button>
+                <button type="button" onclick="redireccion(${id})">Ver Detalle producto</button>
                 <button type="button" onclick="agregarProd(${id})">
                     <img src="img/cart.svg" alt="Carrito" class="carrito">
                 </button>
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-const carrito = [];
+let carrito = localStorage.getItem("carrito") ? JSON.parse(localStorage.getItem("carrito")) : [];
 
 function agregarProd(idProd) {
     carrito.push(productos[idProd]);
@@ -110,3 +110,32 @@ function buscar(palabra){
     });
     document.getElementById("listado-productos").innerHTML = contenido;
 }
+    function redireccion(id) {
+        localStorage.setItem("idProd", id);
+        console.log(id)
+        location.href = "prod.html";
+    }
+
+        function cargarDetalleProducto() {
+        const id = localStorage.getItem("idProd");
+        console.log(id)
+        if (id !== null && productos[id]) {
+            const p = productos[id];
+            document.getElementById("detalle-producto").innerHTML = `
+                <img src="img/${p.imagen}" alt="${p.nombre}">
+                <div class="detalle-info">
+                    <h2>${p.nombre}</h2>
+                    <p class="detalle-precio">${p.precio} $</p>
+                    <p>Este es un excelente ${p.categoria.toLowerCase()}, hecho a partir de materiales de alta calidad.</p>
+                    <button class="btn-agregar" onclick="agregarProd(${id})">Agregar al carrito</button>
+                </div>
+            `;
+        } else {
+            document.getElementById("detalle-producto").innerHTML = "<p>Producto no encontrado</p>";
+        }
+    }
+    function limpiarCarrito(){
+        localStorage.setItem("carrito", []);
+        carrito=[];
+        location.href="carrito.html"
+    }

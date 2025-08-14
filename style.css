@@ -136,7 +136,7 @@ a {
   padding: 20px;
   background-color: #f4f4f0;
   border-radius: 10px;
-  box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
   font-family: 'Jomolhari', serif;
 }
 
@@ -181,7 +181,6 @@ a {
   font-size: 14px;
 }
 
-/* --- Estilos para filtros --- */
 #filtros {
   display: flex;
   justify-content: center;
@@ -200,6 +199,7 @@ a {
   border-radius: 5px;
   border: 1px solid #999;
 }
+
 #total-container {
   text-align: center;
   margin: 20px 0;
@@ -210,7 +210,8 @@ a {
   margin-bottom: 10px;
 }
 
-#btn-pagar {
+#btn-pagar,
+#btn-limpiar {
   background-color: #6b4c3b;
   color: white;
   padding: 10px 25px;
@@ -219,7 +220,71 @@ a {
   cursor: pointer;
 }
 
-#btn-pagar:hover {
+#btn-pagar:hover,
+#btn-limpiar:hover {
   background-color: #5b3f32;
 }
 
+.detalle-container {
+  max-width: 900px;
+  margin: 40px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #cbc696;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.detalle-container img {
+  max-width: 350px;
+  border-radius: 8px;
+}
+
+.detalle-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.detalle-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.detalle-info p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.detalle-precio {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.btn-agregar    {
+  background-color: #6b4c3b;
+  color: white !important;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.btn-agregar:hover {
+  background-color: #5b3f32;
+}
+
+.producto button {
+  background-color: #5b3f32;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px 100px;
+}
